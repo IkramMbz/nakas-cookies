@@ -1,0 +1,143 @@
+.nakas-cookies-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-background);
+    border-top: 1px solid var(--color-nega-secondary-color);
+}
+
+.nakas-cookies-banner-content,
+.nakas-cookies-dialog-action,
+.nakas-cookies-banner-text {
+    display: flex;
+    gap: 1rem;
+}
+
+.nakas-cookies-banner-content {
+    align-items: center;
+}
+
+.nakas-cookies-banner-text {
+    align-items: start;
+    flex: 1 1 0%;
+    flex-direction: column;
+}
+
+.nakas-cookies-hr {
+    margin-top: 2rem;
+}
+
+.nakas-cookies-dialog-action,
+.nakas-cookies-preferences {
+    margin-top: 1rem;
+}
+
+.nakas-cookies-dialog-action {
+    justify-content: end;
+}
+
+.nakas-cookies-preferences {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nakas-cookies-card {
+    border: 1px solid var(--color-nega-primary-color);
+    background-color: var(--color-nega-bold-color);
+    transition: all 200ms ease-in-out;
+}
+
+.nakas-cookies-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    color: var(--color-nega-bold-color);
+}
+
+.nakas-cookies-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nakas-cookies-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nakas-cookies-icon {
+    color: var(--color-accent);
+}
+
+.nakas-cookies-chevron {
+    transition: transform 300ms ease-in-out;
+    color: var(--color-primary-color);
+}
+
+.nakas-cookies-chevron.open {
+    transform: rotate(180deg);
+}
+
+.nakas-cookies-description {
+    text-align: left;
+}
+
+.nakas-cookies-active-badge {
+    background: var(--color-accent);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
+}
+
+.nakas-cookies-preference-item {
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nakas-cookies-preference-item.open {
+    max-height: 24rem;
+    opacity: 1;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 1024px) {
+    .nakas-cookies-banner-content {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nakas-cookies-banner-text p {
+        margin: 0 auto;
+    }
+}
